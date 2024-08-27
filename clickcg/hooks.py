@@ -114,9 +114,9 @@ app_license = "mit"
 # ---------------
 # Override standard doctype classes
 
-# override_doctype_class = {
-# 	"ToDo": "custom_app.overrides.CustomToDo"
-# }
+override_doctype_class = {
+    "Process Statement Of Accounts": "clickcg.overrides.process_statement_of_accounts.ClickcgProcessStatementOfAccounts"
+}
 
 # Document Events
 # ---------------
@@ -159,9 +159,10 @@ app_license = "mit"
 # Overriding Methods
 # ------------------------------
 #
-# override_whitelisted_methods = {
-# 	"frappe.desk.doctype.event.event.get_events": "clickcg.event.get_events"
-# }
+override_whitelisted_methods = {
+    "erpnext.accounts.doctype.process_statement_of_accounts.process_statement_of_accounts.send_emails": "clickcg.overrides.process_statement_of_accounts.send_emails",
+    "erpnext.accounts.doctype.process_statement_of_accounts.process_statement_of_accounts.download_statements": "clickcg.overrides.process_statement_of_accounts.download_statements",
+}
 #
 # each overriding function accepts a `data` argument;
 # generated from the base implementation of the doctype dashboard,
@@ -226,4 +227,3 @@ app_license = "mit"
 # default_log_clearing_doctypes = {
 # 	"Logging DocType Name": 30  # days to retain logs
 # }
-
