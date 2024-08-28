@@ -257,12 +257,14 @@ def get_html(doc, filters, entry, col, res, ageing):
 
         letter_head = get_letter_head(doc, 0)
 
+    report = "Cuentas por Cobrar" if doc.report == "Accounts Receivable" else doc.report
+
     html = frappe.render_template(
         template_path,
         {
             "filters": filters,
             "data": res,
-            "report": {"report_name": doc.report, "columns": col},
+            "report": {"report_name": report, "columns": col},
             "ageing": ageing[0] if (doc.include_ageing and ageing) else None,
             "letter_head": letter_head if doc.letter_head else None,
             "terms_and_conditions": (
