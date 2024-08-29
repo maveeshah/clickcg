@@ -45,7 +45,7 @@
 
         .table-container th,
         .table-container td {
-            border: 1px solid #000;
+            border: 1px solid #ddd;
             padding: 8px;
             text-align: left;
         }
@@ -79,7 +79,7 @@
 
         th,
         td {
-            border: 1px solid black;
+            border: 1px solid #ddd;
             padding: 8px;
             text-align: left;
         }
@@ -87,25 +87,30 @@
         th {
             background-color: #f2f2f2;
         }
+
+        h2,
+        h4 {
+            font-family: 'Good Times', Arial, sans-serif;
+            /* Applying Good Times font */
+        }
     </style>
 </head>
 <div id="header-html" class="hidden-pdf">
     {% if letter_head.content %}
     <div class="letter-head text-center">{{ letter_head.content }}</div>
-    <hr style="height:2px;border-width:0;color:black;background-color:black;">
     {% endif %}
 </div>
 <div id="footer-html" class="visible-pdf">
     {% if letter_head.footer %}
     <div class="letter-head-footer">
-        <hr style="border-width:0;color:black;background-color:black;padding-bottom:2px;">
         {{ letter_head.footer }}
     </div>
     {% endif %}
 </div>
 
-<h2 class="text-center" style="margin-top:0">{{ _(report.report_name) }}</h2>
-<h4 class="text-center">
+<h2 class="text-center" style="margin-top:0; font-family: 'Good Times', Arial, sans-serif;">{{ _(report.report_name) }}
+</h2>
+<h4 class="text-center" style="font-family: 'Good Times', Arial, sans-serif;">
     {{ filters.customer_name }}
 </h4>
 <h6 class="text-center">
@@ -119,7 +124,7 @@
     {{ frappe.format(filters.report_date, 'Date') }}
 </h5>
 
-<table>
+<table class="table-container">
     <thead>
         <tr>
             <th>#</th>
@@ -160,5 +165,4 @@
     </tbody>
 </table>
 
-<hr>
 <p class="text-right text-muted">{{ _("Printed On ") }}{{ frappe.utils.now() }}</p>
