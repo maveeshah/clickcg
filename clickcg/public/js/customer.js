@@ -8,7 +8,6 @@ frappe.ui.form.on("Customer", {
                     frappe.set_route("query-report", "Cuentas por Cobrar", {
                         party_type: "Customer",
                         party: frm.doc.name,
-                        company: frm.doc.company,
                     });
                 },
                 __("View")
