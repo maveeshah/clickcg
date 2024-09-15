@@ -1,0 +1,36 @@
+{
+ "add_total_row": 0,
+ "columns": [],
+ "creation": "2024-09-15 11:30:14.268407",
+ "disabled": 0,
+ "docstatus": 0,
+ "doctype": "Report",
+ "filters": [],
+ "idx": 0,
+ "is_standard": "Yes",
+ "json": "{\"columns\":[{\"label\":\"Posting Date\",\"fieldname\":\"posting_date\",\"fieldtype\":\"Date\",\"options\":null,\"width\":90,\"id\":\"posting_date\",\"name\":\"Posting Date\",\"editable\":false},{\"label\":\"Comprobante No.\",\"fieldname\":\"voucher_no\",\"fieldtype\":\"Dynamic Link\",\"options\":\"voucher_type\",\"width\":180,\"id\":\"voucher_no\",\"name\":\"Comprobante No.\",\"editable\":false,\"compareValue\":null},{\"fieldname\":\"remarks\",\"fieldtype\":\"Small Text\",\"label\":\"Remarks\",\"insert_after_index\":2,\"link_field\":{\"fieldname\":\"voucher_no\",\"names\":{}},\"doctype\":\"Sales Invoice\",\"width\":100,\"id\":\"remarks\",\"name\":\"Remarks\",\"editable\":false,\"compareValue\":null},{\"fieldname\":\"factura_fiscal_texto\",\"fieldtype\":\"Data\",\"label\":\"Factura Electronica\",\"insert_after_index\":3,\"link_field\":{\"fieldname\":\"voucher_no\",\"names\":{}},\"doctype\":\"Sales Invoice\",\"width\":100,\"id\":\"factura_fiscal_texto\",\"name\":\"Factura Electronica\",\"editable\":false,\"compareValue\":null},{\"label\":\"Cantidad facturada\",\"fieldname\":\"invoiced\",\"fieldtype\":\"Currency\",\"options\":\"currency\",\"width\":120,\"id\":\"invoiced\",\"name\":\"Cantidad facturada\",\"editable\":false,\"compareValue\":null,\"_index\":1},{\"label\":\"Cantidad Pagada\",\"fieldname\":\"paid\",\"fieldtype\":\"Currency\",\"options\":\"currency\",\"width\":120,\"id\":\"paid\",\"name\":\"Cantidad Pagada\",\"editable\":false,\"compareValue\":null,\"_index\":2},{\"label\":\"Monto pendiente\",\"fieldname\":\"outstanding\",\"fieldtype\":\"Currency\",\"options\":\"currency\",\"width\":120,\"id\":\"outstanding\",\"name\":\"Monto pendiente\",\"editable\":false,\"compareValue\":null,\"_index\":3},{\"label\":\"Edad (D\\u00edas)\",\"fieldname\":\"age\",\"fieldtype\":\"Int\",\"options\":null,\"width\":80,\"id\":\"age\",\"name\":\"Edad (D\\u00edas)\",\"editable\":false,\"compareValue\":null},{\"label\":\"0-30\",\"fieldname\":\"range1\",\"fieldtype\":\"Currency\",\"options\":\"currency\",\"width\":120,\"id\":\"range1\",\"name\":\"0-30\",\"editable\":false,\"compareValue\":null},{\"label\":\"31-60\",\"fieldname\":\"range2\",\"fieldtype\":\"Currency\",\"options\":\"currency\",\"width\":120,\"id\":\"range2\",\"name\":\"31-60\",\"editable\":false,\"compareValue\":null,\"_index\":4},{\"label\":\"61-90\",\"fieldname\":\"range3\",\"fieldtype\":\"Currency\",\"options\":\"currency\",\"width\":120,\"id\":\"range3\",\"name\":\"61-90\",\"editable\":false,\"compareValue\":null,\"_index\":5},{\"label\":\"91-120\",\"fieldname\":\"range4\",\"fieldtype\":\"Currency\",\"options\":\"currency\",\"width\":120,\"id\":\"range4\",\"name\":\"91-120\",\"editable\":false,\"compareValue\":null,\"_index\":6},{\"label\":\"121-Above\",\"fieldname\":\"range5\",\"fieldtype\":\"Currency\",\"options\":\"currency\",\"width\":120,\"id\":\"range5\",\"name\":\"121-Above\",\"editable\":false,\"compareValue\":null}],\"filters\":{\"company\":\"CLiCK Consulting Group S.A.\",\"report_date\":\"2024-06-10\",\"party_type\":\"Customer\",\"party\":[\"COOPERATIVA DE SERVICOS MULTIPLES EL EDUCADOR VERAGUENSE (COOPEVE)\"],\"ageing_based_on\":\"Due Date\",\"range1\":30,\"range2\":60,\"range3\":90,\"range4\":120,\"customer_group\":[]}}",
+ "letter_head": "",
+ "letterhead": null,
+ "modified": "2024-09-15 11:30:14.268407",
+ "modified_by": "Administrator",
+ "module": "Clickcg",
+ "name": "Cuentas por Cobrar",
+ "owner": "Administrator",
+ "prepared_report": 0,
+ "ref_doctype": "Sales Invoice",
+ "reference_report": "Accounts Receivable",
+ "report_name": "Cuentas por Cobrar",
+ "report_type": "Custom Report",
+ "roles": [
+  {
+   "role": "Accounts User"
+  },
+  {
+   "role": "Accounts Manager"
+  },
+  {
+   "role": "Employee Self Service"
+  }
+ ],
+ "timeout": 0
+}
